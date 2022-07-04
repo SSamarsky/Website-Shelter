@@ -308,7 +308,7 @@ a {
     cursor: default;
 }
 .slider__btn-left.disabled:hover {
-    background-color: #fff;
+    background-color: #F6F6F6;
     border: 2px solid #F1CDB3;
 }
 
