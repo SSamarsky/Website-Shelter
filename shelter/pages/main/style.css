@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Arial";
+    src: url("../../assets/fonts/arial/arial-regular.ttf") format("ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: url("../../assets/fonts/georgia/georgia-regular.ttf") format("ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -5,6 +19,7 @@ html {
 body {
     margin: 0;
     font-size: 15px;
+    font-family: Arial, sans-serif;
 }
 
 *,
@@ -91,6 +106,7 @@ ul {
 }
 
 .nav {
+    padding-bottom: 15px;
     margin-left: auto;
     margin-bottom: 5px;
 }
@@ -101,7 +117,7 @@ ul {
 }
 
 .nav__link {
-    padding-bottom: 5px;
+    padding-bottom: 4px;
     margin-left: 35px;
     color: #CDCDCD;
     font-size: 15px;
@@ -128,9 +144,69 @@ ul {
 .intro {
     width: 100%;
     min-height: 908px;
-    background-color: #3f342e;
-    background-image: url("../../assets/images/intro-background.jpg");
+    background: linear-gradient(to right, #4e3e33, #211f20);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.intro__inner {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 180px;
+}
+
+.intro__img {
+    width: 100%;
+    max-width: 698px;
+    height: 728px;
+    flex-shrink: 0;
+    background-image: url("../../assets/images/intro-dog.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro__content {
+    padding-bottom: 260px;
+    margin-right: 42px;
+    max-width: 460px;
+    min-height: 322px;
+}
+
+.content__title {
+    margin-bottom: 42px;
+    max-width: 310px;
+    font-size: 44px;
+    color: #fff;
+    line-height: 57px;
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+}
+
+.content__text {
+    margin-bottom: 58px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #CDCDCD;
+    line-height: 24px;
+}
+
+.button {
+    padding: 15px 45px;
+    height: 52px;
+    color: #292929;
+    font-size: 17px;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.06em;
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all .5s ease; 
+}
+
+.button:hover {
+    background-color: #FDDCC4;
 }
