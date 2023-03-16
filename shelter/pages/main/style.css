@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 0;
+    font-size: 15px;
 }
 
 *,
@@ -34,4 +35,102 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.container {
+    padding: 0 40px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+}
+
+/* ----- Header ----- */
+.header {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.logo {
+    max-height: 60px;
+    text-align: center;
+}
+
+.logo__title {
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: #F1CDB3;
+    line-height: 35.2px;
+    letter-spacing: 0.06em;
+    text-shadow: 1px 0 1px #000,
+        0 1px 1px #000,
+        -1px 0 1px #000,
+        0 -1px 1px #000,
+        0px 4px 4px rgba(0, 0, 0, 0.5);
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo__subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+}
+
+.nav {
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    padding-bottom: 5px;
+    margin-left: 35px;
+    color: #CDCDCD;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: all .2s ease-in-out;
+}
+
+.nav__link.active {
+    border-bottom: 3px solid #F1CDB3;
+    color: #FAFAFA;
+}
+
+.nav__link:hover {
+    color: #FAFAFA;
+}
+
+/* ----- Main ----- */
+.main {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.intro {
+    width: 100%;
+    min-height: 908px;
+    background-color: #3f342e;
+    background-image: url("../../assets/images/intro-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
