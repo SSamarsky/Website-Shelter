@@ -205,7 +205,7 @@ ul {
     text-decoration: none;
     cursor: pointer;
     border: none;
-    transition: all .5s ease; 
+    transition: all .5s ease;
 }
 
 .button:hover {
@@ -266,4 +266,120 @@ ul {
 
 .about__text:last-child {
     margin-bottom: 14px;
+}
+
+.pets {
+    padding-top: 80px;
+    min-height: 877px;
+    text-align: center;
+    background-color: #F6F6F6;
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pets__inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.slider__btn {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border: 2px solid #F1CDB3;
+    font-size: 20px;
+    line-height: 48px;
+    color: #292929;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border-radius: 100%;
+    margin-top: 192px;
+}
+
+.slider__btn:hover {
+    background-color: #FDDCC4;
+    border: 2px solid #FDDCC4;
+}
+
+.slider__box {
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    margin-bottom: 62px;
+}
+
+.slider__inner {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;
+}
+
+.pets__item {
+    flex-shrink: 0;
+    border-radius: 9px;
+    min-width: 270px;
+    height: 435px;
+    overflow: hidden;
+    transition: all .5s ease;
+    background-color: #fff;
+}
+
+.pets__item:hover {
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 10px 2px rgba(34, 60, 80, 0.08);
+    -moz-box-shadow: 1px 1px 10px 2px rgba(34, 60, 80, 0.08);
+    box-shadow: 1px 1px 10px 2px rgba(34, 60, 80, 0.08);
+}
+
+.pets__item:hover button {
+    background-color: #FDDCC4;
+    border: 2px solid #FDDCC4;
+}
+
+.pets__photo {
+    margin-bottom: 26px;
+    width: 270px;
+    height: 270px;
+}
+
+.pets__name {
+    margin-bottom: 32px;
+    color: #545454;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.pets__btn {
+    margin-bottom: 30px;
+    padding: 12px 42px;
+    color: #292929;
+    font-size: 17px;
+    line-height: 22px;
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    border-radius: 100px;
+    border: 2px solid #F1CDB3;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.pets__btn:hover {
+    background-color: #FDDCC4;
+    border: 2px solid #FDDCC4;
 }
