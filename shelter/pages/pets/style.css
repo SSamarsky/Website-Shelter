@@ -87,11 +87,6 @@ ul {
     color: #545454;
     line-height: 35.2px;
     letter-spacing: 0.06em;
-    text-shadow: 1px 0 1px #000, 
-    0 1px 1px #000, 
-    -1px 0 1px #000, 
-    0 -1px 1px #000,
-    0px 4px 4px rgba(0, 0, 0, 0.5);
     font-family: Georgia, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -135,3 +130,128 @@ ul {
     color: #292929;
 }
 
+/* ----- Main ----- */
+.main {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #F6F6F6;
+}
+
+.title {
+    padding-top: 80px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #545454;
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    font-family: Georgia, sans-serif;
+}
+
+.pets__container {
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.pets__item {
+    margin-bottom: -10px;
+    text-align: center;
+    border-radius: 9px;
+    width: 270px;
+    height: 435px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.pets__item:hover {
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 10px 2px rgba(34, 60, 80, 0.08);
+    -moz-box-shadow: 1px 1px 10px 2px rgba(34, 60, 80, 0.08);
+    box-shadow: 1px 1px 10px 2px rgba(34, 60, 80, 0.08);
+}
+
+.pets__item:hover button {
+    background-color: #FDDCC4;
+    border: 2px solid #FDDCC4;
+}
+
+.pets__photo {
+    margin-bottom: 26px;
+    width: 270px;
+    height: 270px;
+}
+
+.pets__name {
+    margin-bottom: 32px;
+    color: #545454;
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+}
+
+.pets__btn {
+    margin-bottom: 30px;
+    padding: 12px 42px;
+    color: #292929;
+    font-size: 17px;
+    line-height: 22px;
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    border-radius: 100px;
+    border: 2px solid #F1CDB3;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.pagination__btns {
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination__btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+    border: 2px solid #F1CDB3;
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    color: #292929;
+    ;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.pagination__btn:hover {
+    background-color: #FDDCC4;
+    border: 2px solid #FDDCC4;
+}
+
+.pagination__btn.active {
+    background-color: #F1CDB3;
+}
+
+.pagination__btn.active:hover {
+    background-color: #F1CDB3;
+    border: 2px solid #F1CDB3;
+    cursor: default;
+}
+
+.pagination__btn.disabled {
+    border: 2px solid #CDCDCD;
+    color: #CDCDCD;
+}
+
+.pagination__btn.disabled:hover {
+    background-color: #fff;
+    border: 2px solid #CDCDCD;
+    cursor: default;
+}

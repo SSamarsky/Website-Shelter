@@ -339,7 +339,7 @@ ul {
     min-width: 270px;
     height: 435px;
     overflow: hidden;
-    transition: all .5s ease;
+    transition: all .4s ease-in-out;
     background-color: #fff;
     cursor: pointer;
 }
