@@ -313,6 +313,10 @@ ul {
     border: 2px solid #FDDCC4;
 }
 
+.slider__btn:active {
+    background-color: #F1CDB3;
+}
+
 .slider__box {
     width: 100%;
     max-width: 990px;
@@ -337,6 +341,7 @@ ul {
     overflow: hidden;
     transition: all .5s ease;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .pets__item:hover {
@@ -382,4 +387,36 @@ ul {
 .pets__btn:hover {
     background-color: #FDDCC4;
     border: 2px solid #FDDCC4;
+}
+
+.help {
+    margin: 0 auto;
+    padding-top: 80px;
+    margin-bottom: 45px;
+    max-width: 1200px;
+}
+
+.help__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.help__item {
+    margin: 0 60px;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.help__item-img {
+    margin-bottom: 25px;
+}
+
+.help__item-title {
+    color: #545454;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
 }
