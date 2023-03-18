@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: "Georgia";
-    src: local("Arial"), url("../../assets/fonts/georgia/georgia-regular.ttf") format("truetype");
+    src: local("Georgia"), url("../../assets/fonts/georgia/georgia-regular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
