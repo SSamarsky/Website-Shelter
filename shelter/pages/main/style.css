@@ -622,20 +622,91 @@ ul {
         display: none;
     }
 
+    .donation {
+        margin-bottom: 100px;
+    }
+
     .donation__inner {
         flex-direction: column-reverse;
         align-items: center;
+        gap: 60px;
     }
 }
 
 @media (max-width: 900px) {
+    .header {
+        height: 90px;
+    }
+
+    .intro__inner {
+        padding-top: 150px;
+    }
+
+    .intro__content {
+        padding-bottom: 115px;
+    }
+
+    .button--center {
+        margin-left: 126px;
+    }
+
+    .intro__img {
+        margin-left: 125px;
+        width: 569px;
+        height: 593px;
+    }
+
+    .about {
+        margin-bottom: 100px;
+    }
+
     .about__inner {
         flex-direction: column-reverse;
         align-items: center;
         gap: 80px;
     }
 
+    .about__content {
+        margin-top: 0;
+    }
+
     .about__img {
         margin-right: 0;
+    }
+
+    .slider__inner {
+        gap: 40px;
+    }
+
+    .help {
+        margin-bottom: 95px;
+    }
+
+    .help__content {
+        gap: 60px;
+    }
+
+    .help__item {
+        width: 170px;
+        height: 113px;
+        margin: 0;
+    }
+
+    .help__item:nth-child(7),
+    .help__item:nth-child(8),
+    .help__item:nth-child(9) {
+        margin-top: -5px;
+    }
+
+    .donation__img {
+        margin: 0;
+    }
+
+    .footer__inner {
+        padding-top: 20px;
+    }
+
+    .footer__img {
+        margin-top: -35px;
     }
 }
