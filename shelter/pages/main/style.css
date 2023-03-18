@@ -230,7 +230,7 @@ ul {
 .about {
     display: flex;
     justify-content: center;
-    height: 508px;
+    min-height: 508px;
     margin-bottom: 80px;
 }
 
@@ -425,7 +425,7 @@ ul {
 
 .donation {
     padding-top: 80px;
-    height: 462px;
+    min-height: 462px;
     background-color: #F6F6F6;
 }
 
@@ -576,4 +576,66 @@ ul {
     font-family: Georgia, sans-serif;
     font-weight: 400;
     text-decoration: none;
+}
+
+@media (max-width: 1273px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .slider__inner {
+        gap: 40px;
+    }
+
+    .container__items {
+        gap: 80px;
+    }
+}
+
+@media (max-width: 1127px) {
+    .intro__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro__content {
+        padding-bottom: 100px;
+        margin: 0;
+    }
+
+    .container__items {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .about__img {
+        margin-right: 60px;
+    }
+
+    .slider__inner {
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .pets__item:last-child {
+        display: none;
+    }
+
+    .donation__inner {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .about__inner {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .about__img {
+        margin-right: 0;
+    }
 }
