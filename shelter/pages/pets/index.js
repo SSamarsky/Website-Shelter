@@ -1,21 +1,49 @@
 console.log(`
 Моя оценка - 100 баллов
-Отзыв по пунктам ТЗ:
-Выполненные пункты:
-1) блок 'header' 
-2) блок 'Not only' 
-3) блок 'About' 
-4) блок 'Our Friends' 
-5) блок 'Help' 
-6) блок 'In addition' 
-7) блок 'footer' 
-...
-31) нет полосы прокрутки при ширине страницы 'Main' от 1280рх до 768рх 
-32) нет полосы прокрутки при ширине страницы 'Main' от 768рх до 320рх 
-33) нет полосы прокрутки при ширине страницы 'Pets' от 1280рх до 768рх  
-34) нет полосы прокрутки при ширине страницы 'Pets' от 768рх до 320рх 
-35) на странице 'Main', при плавном изменении размера экрана элементы верстки так же плавно меняют свои размеры и расположение, не наезжают друг на друга, изображения могут менять размер, но сохраняют правильные пропорции 
-36) на странице 'Pets', при плавном изменении размера экрана элементы верстки так же плавно меняют свои размеры и расположение, не наезжают друг на друга, изображения могут менять размер, но сохраняют правильные пропорции 
-37) При ширине экрана меньше 768px на обеих страницах меню в хедере скрывается, появляется иконка бургер-меню. Открытие меню при клике на иконку бургер-меню на текущем этапе не проверяется 
-38) Верстка обеих страниц валидная: для проверки валидности вёрстки используйте сервис https://validator.w3.org/  
 `);
+
+// Burger-Menu
+const doc = document,
+  burger = doc.querySelector(".burger"),
+  burgerLine = doc.querySelectorAll("burger__line"),
+  nav = doc.querySelector(".nav"),
+  navLinks = doc.querySelectorAll(".nav__link"),
+  body = doc.querySelector(".body"),
+  logo = doc.querySelector(".logo"),
+  shadow = doc.querySelector(".shadow"),
+  header = doc.querySelector(".header");
+
+function toggleMenu() {
+  burger.classList.toggle("open");
+  nav.classList.toggle("open");
+  body.classList.toggle("open");
+  logo.classList.toggle("open");
+  shadow.classList.toggle("open");
+  header.classList.toggle("open");
+}
+
+function closeMenu(event) {
+  if (event.target.classList.contains("nav__link")) {
+    burger.classList.remove("open");
+    nav.classList.remove("open");
+    body.classList.remove("open");
+    logo.classList.remove("open");
+    shadow.classList.remove("open");
+    header.classList.remove("open");
+  }
+}
+
+burger.addEventListener("click", toggleMenu);
+burgerLine.forEach((el) => el.addEventListener("click", toggleMenu));
+navLinks.forEach((element) => element.addEventListener("click", closeMenu));
+
+document.addEventListener("click", (e) => {
+  let target = e.target;
+  let itsNav = target == nav || nav.contains(target);
+  let itsBurger = target == burger;
+  let navIsOpen = nav.classList.contains("open");
+
+  if (!itsNav && !itsBurger && navIsOpen) {
+    toggleMenu();
+  }
+});

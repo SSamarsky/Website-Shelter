@@ -725,6 +725,7 @@ ul {
         from {
             right: -320px;
         }
+
         to {
             right: 0;
         }
@@ -734,6 +735,7 @@ ul {
         from {
             right: 0;
         }
+
         to {
             right: -320px;
         }
@@ -762,7 +764,14 @@ ul {
     }
 
     .logo.open {
-        display: none;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        user-select: none;
+    }
+
+    .logo.open a {
+        cursor: default;
+        pointer-events: none;
     }
 
     .logo--nav {
