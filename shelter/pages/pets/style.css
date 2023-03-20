@@ -195,6 +195,7 @@ ul {
     color: #545454;
     font-size: 20px;
     font-family: Georgia, sans-serif;
+    font-weight: 400;
     line-height: 23px;
     letter-spacing: 0.06em;
 }
@@ -435,26 +436,27 @@ ul {
         pointer-events: none;
     }
 
-    .logo-nav {
+    .logo--nav {
         width: 186px;
         display: block;
         margin-top: 30px;
         margin-left: 10px;
         max-height: 60px;
         text-align: center;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+
+    .logo--nav.open {
+        opacity: 1;
     }
 
     .logo__title-nav {
         margin-bottom: 10px;
         font-size: 32px;
-        color: #F1CDB3;
+        color: #545454;
         line-height: 35.2px;
         letter-spacing: 0.06em;
-        text-shadow: 1px 0 1px #000,
-            0 1px 1px #000,
-            -1px 0 1px #000,
-            0 -1px 1px #000,
-            0px 4px 4px rgba(0, 0, 0, 0.5);
         font-family: Georgia, sans-serif;
         font-weight: 400;
         font-style: normal;
@@ -463,7 +465,7 @@ ul {
     .logo__subtitle-nav {
         font-size: 13px;
         font-weight: 400;
-        color: #fff;
+        color: #292929;
         line-height: 15px;
         letter-spacing: 0.1em;
     }

@@ -10,6 +10,7 @@ const doc = document,
   navLinks = doc.querySelectorAll(".nav__link"),
   body = doc.querySelector(".body"),
   logo = doc.querySelector(".logo"),
+  logoNav = doc.querySelector(".logo--nav"),
   shadow = doc.querySelector(".shadow");
 
 function toggleMenu() {
@@ -17,6 +18,7 @@ function toggleMenu() {
   nav.classList.toggle("open");
   body.classList.toggle("open");
   logo.classList.toggle("open");
+  logoNav.classList.toggle("open");
   shadow.classList.toggle("open");
 }
 
@@ -26,6 +28,7 @@ function closeMenu(event) {
     nav.classList.remove("open");
     body.classList.remove("open");
     logo.classList.remove("open");
+    logoNav.classList.remove("open");
     shadow.classList.remove("open");
   }
 }

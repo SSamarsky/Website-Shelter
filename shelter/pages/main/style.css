@@ -781,6 +781,12 @@ ul {
         margin-left: 10px;
         max-height: 60px;
         text-align: center;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    .logo--nav.open {
+        opacity: 1;
     }
 
     .logo__title-nav {
@@ -799,6 +805,30 @@ ul {
         font-style: normal;
     }
 
+    .logo__subtitle-nav {
+        font-size: 13px;
+        font-weight: 400;
+        color: #fff;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+    }
+
+    .logo__title-nav {
+        margin-bottom: 10px;
+        font-size: 32px;
+        color: #F1CDB3;
+        line-height: 35.2px;
+        letter-spacing: 0.06em;
+        text-shadow: 1px 0 1px #000,
+            0 1px 1px #000,
+            -1px 0 1px #000,
+            0 -1px 1px #000,
+            0px 4px 4px rgba(0, 0, 0, 0.5);
+        font-family: Georgia, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
     .logo__subtitle-nav {
         font-size: 13px;
         font-weight: 400;
