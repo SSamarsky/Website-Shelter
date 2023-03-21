@@ -278,22 +278,36 @@ function createPage(index) {
   containerPets.appendChild(petItem);
 }
 
-function makeArrItems(amountItems) {
-  if (amountItems > pets.length) throw new Error("Wrong number of elements");
-  let arr = [];
-  while (arr.length < amountItems) {
-    let randomIndex = Math.floor(Math.random() * 8);
-    let isItem = arr.includes(randomIndex);
-    if (!isItem) arr.push(randomIndex);
+function makeArrPages(pages, items) {
+  let arrPages = [];
+  let arrItems = [];
+  let arrRandomItems = [];
+
+  while (arrPages.length < pages) {
+    arrItems.length = 0;
+
+    while (arrItems.length < items) {
+      if (arrRandomItems.length === 0) {
+        arrRandomItems = makeArrRandomItems(pets.length);
+      }
+      let item = arrRandomItems.pop();
+      let isItem = arrItems.includes(item);
+      if (!isItem) arrItems.push(item);
+      else arrRandomItems.unshift(item);
+    }
+    let itms = [];
+    itms = [...arrItems];
+    arrPages.push(itms);
   }
-  return arr;
+  return arrPages;
 }
 
-function makeArrPages(amountPages, amountItems) {
+function makeArrRandomItems(n) {
   let arr = [];
-  while (arr.length < amountPages) {
-    let arrItems = makeArrItems(amountItems);
-    arr.push(arrItems);
+  while (arr.length < n) {
+    const item = Math.floor(Math.random() * 8);
+    const isItem = arr.includes(item);
+    if (!isItem) arr.push(item);
   }
   return arr;
 }
