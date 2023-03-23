@@ -334,6 +334,7 @@ ul {
 .slider__inner {
     margin-bottom: 15px;
     width: 100%;
+    min-height: 435px;
     display: flex;
     justify-content: space-between;
     gap: 90px;
@@ -348,6 +349,28 @@ ul {
     transition: all .4s ease-in-out;
     background-color: #fff;
     cursor: pointer;
+
+    position: relative;
+    right: 0;
+    transition: all .5s linear;
+}
+
+@keyframes right {
+    from { right: 0; }
+    to { right: 1100px; }
+}
+
+@keyframes left {
+    from { right: 1100px; }
+    to { right: 0; }
+}
+
+.pets__item.right {
+    animation: right 1s;
+}
+
+.pets__item.left {
+    animation: left 1s;
 }
 
 .pets__item:hover {
