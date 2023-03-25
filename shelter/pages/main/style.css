@@ -309,6 +309,11 @@ ul {
     margin-top: 192px;
 }
 
+.slider__btn.disabled:hover {
+    background-color: #fff;
+    cursor: default;
+}
+
 .slider__btn:hover {
     background-color: #FDDCC4;
     border: 2px solid #FDDCC4;
