@@ -281,7 +281,7 @@ ul {
     margin-top: 14px;
     width: 300px;
     height: 310px;
-    background-image: url("../../assets/images/footer-dog.png");
+    background: url("../../assets/images/background.jpg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -516,7 +516,6 @@ ul {
 
     .burger {
         margin-left: auto;
-        margin-right: 43px;
         position: relative;
         top: 10px;
         z-index: 1000;
@@ -563,6 +562,10 @@ ul {
 @media (max-width: 420px) {
     .container {
         padding: 0 10px;
+    }
+
+    .padding-fix {
+        padding: 0 20px;
     }
 
     .title {

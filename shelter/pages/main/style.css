@@ -64,7 +64,7 @@ ul {
 /* ----- Header ----- */
 .header {
     width: 100%;
-    height: 120px;
+    height: 90px;
     position: absolute;
     top: 0;
     left: 0;
@@ -149,7 +149,7 @@ ul {
 .intro {
     width: 100%;
     min-height: 908px;
-    background: linear-gradient(to right, #4e3e33, #211f20);
+    background: url("../../assets/images/background.jpg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -539,7 +539,7 @@ ul {
     margin: 0 auto;
     width: 100%;
     min-height: 350px;
-    background: linear-gradient(to right, #4e3e33, #211f20);
+    background: url("../../assets/images/background.jpg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -912,7 +912,6 @@ ul {
 
     .burger {
         margin-left: auto;
-        margin-right: 43px;
         position: relative;
         bottom: 11px;
         z-index: 1000;
@@ -1066,6 +1065,10 @@ ul {
 @media (max-width: 425px) {
     .container {
         padding: 0 10px;
+    }
+
+    .padding-fix {
+        padding: 0 20px;
     }
 
     .intro__content {
