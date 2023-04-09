@@ -265,7 +265,7 @@ ul {
     margin: 0 auto;
     width: 100%;
     min-height: 350px;
-    background: linear-gradient(to right, #4e3e33, #211f20);
+    background: url("../../assets/images/background.jpg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -281,7 +281,7 @@ ul {
     margin-top: 14px;
     width: 300px;
     height: 310px;
-    background: url("../../assets/images/background.jpg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+    background: url('./../../assets/images/footer-dog.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
