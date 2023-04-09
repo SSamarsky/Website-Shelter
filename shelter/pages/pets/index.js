@@ -1,7 +1,3 @@
-// console.log(`
-// Моя оценка - 100 баллов
-// `);
-
 // Burger-Menu
 const doc = document,
   burger = doc.querySelector(".burger"),
@@ -58,6 +54,9 @@ const containerPets = doc.querySelector(".pets__container"),
   btnRightLastPage = doc.querySelector("#btn-right-last"),
   btnLeft = doc.querySelector("#btn-left"),
   btnLeftStartPage = doc.querySelector("#btn-left-last");
+
+const popup = doc.querySelector(".popup");
+const popupBg = doc.querySelector(".popup__bg");
 
 let screenWidth = window.screen.width;
 let initIndexes = [];
@@ -177,6 +176,9 @@ function createPage(index) {
   petItem.appendChild(button);
 
   containerPets.appendChild(petItem);
+
+  petItem.addEventListener("click", togglePopup);
+  petItem.addEventListener("click", () => textPopup(index));
 }
 
 function makeArrPages(pages, items) {
@@ -291,4 +293,39 @@ function renderStartPage() {
   btnRightLastPage.classList.remove("disabled");
 
   initIndexes[countPage - 1].forEach((index) => createPage(index));
+}
+
+//Popup
+function togglePopup() {
+  popup.classList.toggle("active");
+  popupBg.classList.toggle("active");
+  body.classList.toggle("active");
+}
+
+const popupBtn = document.querySelector(".popup__btn");
+
+popupBtn.addEventListener("click", togglePopup);
+
+document.addEventListener("click", (e) => {
+  if (e.target === popupBg) {
+    popupBg.classList.remove("active");
+    popup.classList.remove("active");
+    body.classList.toggle("active");
+  }
+});
+
+function textPopup(index) {
+  popup.querySelector(".popup__name").textContent = pets[index].name;
+  popup.querySelector(
+    ".popup__breed"
+  ).textContent = `${pets[index].type} - ${pets[index].breed}`;
+  popup.querySelector(".popup__text").textContent = pets[index].description;
+  popup.querySelector(
+    ".popup__photo"
+  ).style.backgroundImage = `url(../../assets/images/pets/${pets[index].name}.png)`;
+  popup.querySelector("#pet__age").textContent = pets[index].age;
+  popup.querySelector("#pet__inoculations").textContent =
+    pets[index].inoculations;
+  popup.querySelector("#pet__diseases").textContent = pets[index].diseases;
+  popup.querySelector("#pet__parasites").textContent = pets[index].parasites;
 }

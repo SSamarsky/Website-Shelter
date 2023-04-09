@@ -48,9 +48,8 @@ document.addEventListener("click", (e) => {
 const slider = doc.querySelector(".slider__inner");
 const btnLeft = doc.querySelector(".slider__btn-left");
 const btnRight = doc.querySelector(".slider__btn-right");
-const popup = doc.querySelector('.popup');
-const popupBg = doc.querySelector('.popup__bg');
-
+const popup = doc.querySelector(".popup");
+const popupBg = doc.querySelector(".popup__bg");
 
 let itemsSlider = [];
 itemsSlider.push(makeArrItems(3));
@@ -100,8 +99,8 @@ function createItem(index, trend = undefined) {
     slider.appendChild(petItem);
   }
 
-  petItem.addEventListener('click', togglePopup);
-  petItem.addEventListener('click', () => textPopup(index));
+  petItem.addEventListener("click", togglePopup);
+  petItem.addEventListener("click", () => textPopup(index));
 }
 
 function clickSlideRight(n) {
@@ -181,7 +180,6 @@ function toggleDisableBtns(flag) {
 btnRight.addEventListener("click", () => clickSlideRight(3));
 btnLeft.addEventListener("click", () => clickSlideLeft(3));
 
-
 //Popup
 
 function togglePopup() {
@@ -204,13 +202,16 @@ document.addEventListener("click", (e) => {
 
 function textPopup(index) {
   popup.querySelector(".popup__name").textContent = pets[index].name;
-  popup.querySelector(".popup__breed").textContent = `${pets[index].type} - ${pets[index].breed}`
+  popup.querySelector(
+    ".popup__breed"
+  ).textContent = `${pets[index].type} - ${pets[index].breed}`;
   popup.querySelector(".popup__text").textContent = pets[index].description;
   popup.querySelector(
     ".popup__photo"
   ).style.backgroundImage = `url(../../assets/images/pets/${pets[index].name}.png)`;
   popup.querySelector("#pet__age").textContent = pets[index].age;
-  popup.querySelector("#pet__inoculations").textContent =pets[index].inoculations;
+  popup.querySelector("#pet__inoculations").textContent =
+    pets[index].inoculations;
   popup.querySelector("#pet__diseases").textContent = pets[index].diseases;
   popup.querySelector("#pet__parasites").textContent = pets[index].parasites;
 }
