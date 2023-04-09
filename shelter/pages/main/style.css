@@ -758,7 +758,7 @@ ul {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     @keyframes slide-in {
         from {
             right: -320px;
@@ -1318,7 +1318,7 @@ ul {
 .popup__btn {
     position: absolute;
     top: -55px;
-    right: -30px;
+    right: -40px;
     width: 52px;
     height: 52px;
     text-align: center;
@@ -1364,10 +1364,12 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom-left-radius: 9px;
+    border-top-left-radius: 9px;
 }
 
 .popup__content {
-    padding: 50px 20px 88px 29px;
+    padding: 55px 20px 78px 29px;
     max-width: 400px;
     font-family: Georgia, sans-serif;
     font-weight: 400;
