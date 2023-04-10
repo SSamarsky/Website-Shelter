@@ -471,7 +471,7 @@ ul {
         position: absolute;
         right: -320px;
         top: 0;
-        z-index: 100;
+        z-index: 1000;
         transition: .5s;
         width: 100%;
         max-width: 320px;

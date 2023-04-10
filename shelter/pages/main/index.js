@@ -215,8 +215,6 @@ function textPopup(index) {
   popup.querySelector("#pet__parasites").textContent = pets[index].parasites;
 }
 
-
-
 console.log(`Ваша оценка - 98 баллов 
 Отзыв по пунктам ТЗ:
 Не выполненные/не засчитанные пункты:
